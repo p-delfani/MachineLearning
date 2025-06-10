@@ -8,7 +8,7 @@
 
 ---
 
-## 📖 How to Navigate This Guide
+##  How to Navigate This Guide
 
 1. **Scan the TL;DR** for a holistic map.
 2. **Open corresponding notebooks** in `notebooks/` while reading.
@@ -19,7 +19,7 @@
 
 ---
 
-## 🗺️ TL;DR (Click to expand)
+##  TL;DR (Click to expand)
 
 <details>
 <summary><strong>Concept Roadmap & Ecosystem 2025</strong></summary>
@@ -44,7 +44,7 @@
 
 ---
 
-## 📑 Extended Table of Contents
+##  Extended Table of Contents
 
 1. [Math, Stats & Linear Algebra Refresher](#1-math-stats--linear-algebra-refresher)
 2. [Supervised Learning](#2-supervised-learning)
