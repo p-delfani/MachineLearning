@@ -1,7 +1,7 @@
 
   
 
-##<summary><strong> What is Machine Learning?</strong></summary>
+## What is Machine Learning?
 
 Machine learning is a field of artificial intelligence that focuses on enabling systems to learn from data and improve their performance over time without being explicitly programmed for each specific task. It bridges the gap between statistics, computer science, and domain-specific knowledge, allowing us to build models that can predict outcomes, recognize patterns, and make decisions.
 
