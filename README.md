@@ -1,6 +1,6 @@
-# 🧠 Introduction to Machine Learning
+# Introduction to Machine Learning
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg) ![Build](https://img.shields.io/badge/build-passing-brightgreen) ![Made With ♥](https://img.shields.io/badge/Made%20with-♥-ff69b4)
+
 
 > **A deep, practical, and modern guide (v3.0 – June 10 2025)**
 > Curated from classic textbooks, top‑cited papers, production war stories, and community best practices.
