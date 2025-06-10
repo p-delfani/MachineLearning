@@ -2,7 +2,7 @@
   
 
 ## What is Machine Learning?
-
+<details>
 Machine learning is a field of artificial intelligence that focuses on enabling systems to learn from data and improve their performance over time without being explicitly programmed for each specific task. It bridges the gap between statistics, computer science, and domain-specific knowledge, allowing us to build models that can predict outcomes, recognize patterns, and make decisions.
 
 At its core, machine learning is about learning a function or mapping from inputs to outputs, based on historical data. This can be supervised learning (where data comes with labels), unsupervised learning (discovering structure in data without labels), or reinforcement learning (learning via interaction with an environment to maximize a reward signal).
@@ -25,7 +25,7 @@ Use the checklists at the end of each chapter when working on real projects.
 
 Heads‑up: Many code snippets rely on Python ≥3.11 and CUDA‑capable GPUs. CPU fallbacks are included but slower.
 
-##  TL;DR (Click to expand)
+##  TL;DR 
 
 <details>
 <summary><strong>Concept Roadmap & Ecosystem 2025</strong></summary>
