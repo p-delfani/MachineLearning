@@ -59,3 +59,76 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LinearRegression
+
+def load_data(path):
+    return pd.read_csv(path)
+
+def build_pipeline():
+    categorical_features = ['EducationLevel', 'JobRole']
+    categorical_transformer = OneHotEncoder()
+
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ('cat', categorical_transformer, categorical_features)
+        ],
+        remainder='passthrough'  # Keep other columns (e.g., YearsExperience)
+    )
+
+    pipeline = Pipeline(steps=[
+        ('preprocessor', preprocessor),
+        ('regressor', LinearRegression())
+    ])
+    return pipeline
+
+
+from sklearn.metrics import mean_absolute_error, r2_score
+
+def train(pipeline, X, y):
+    pipeline.fit(X, y)
+    return pipeline
+
+def evaluate(pipeline, X, y):
+    preds = pipeline.predict(X)
+    mae = mean_absolute_error(y, preds)
+    r2 = r2_score(y, preds)
+    return mae, r2
+
+
+from preprocess import load_data, build_pipeline
+from model import train, evaluate
+
+def main():
+    data = load_data("data/employees.csv")
+
+    X = data.drop("Salary", axis=1)
+    y = data["Salary"]
+
+    pipeline = build_pipeline()
+    model = train(pipeline, X, y)
+
+    mae, r2 = evaluate(model, X, y)
+
+    print(f"✅ مدل آموزش دید! MAE: {mae:.2f} | R²: {r2:.2f}")
+
+    sample = {
+        'YearsExperience': [5],
+        'EducationLevel': ['Master'],
+        'JobRole': ['Data Scientist']
+    }
+
+    import pandas as pd
+    sample_df = pd.DataFrame(sample)
+    predicted_salary = model.predict(sample_df)[0]
+    print(f"💰 پیش‌بینی حقوق: {predicted_salary:.2f} دلار در سال")
+
+if __name__ == "__main__":
+    main()
+
